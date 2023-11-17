@@ -73,6 +73,8 @@ export default function Home() {
        <button className="p-5 font-bold bg-blue-300">card 4</button>
       </div> */}
 
+      {/* <Image src={"/panaverse.png"} alt={""} width={80} height={80}/>  */}
+
     </div>
   )
 }
