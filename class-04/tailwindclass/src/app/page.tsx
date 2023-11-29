@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <div>
-      <div className=" bg-gray-200 mt-20">
+      {/* <div className=" bg-gray-200 mt-20">
         <p>This is a first line</p>
         <button className="bg-red-200 p-3 m-5">Button</button>
         <p>This is a last line</p>
@@ -25,7 +25,7 @@ export default function Home() {
         <button className=" border p-5 mx-4 bg-white shadow-lg">card 2</button>
         <button className=" border p-5 mx-4 bg-white shadow-2xl">card 3</button>
         <button className=" border p-5 mx- bg-white shadow-inner">card 4</button>
-      </div>
+      </div> */}
 
       {/* <div className="m-10 flex space-x-10">
        <button className="p-5 font-bold bg-red-300">card 1</button>
@@ -43,16 +43,16 @@ export default function Home() {
        <button className="p-5 font-bold bg-green-300">card 2</button>
        <button className="p-5 font-bold bg-gray-300">card 3</button>
        <button className="p-5 font-bold bg-blue-300">card 4</button>
-      </div>
+      </div> */}
 
-      <div className="m-10 flex space-x-2 justify-center ">
+      {/* <div className="m-10 flex space-x-2 justify-center ">
        <button className="p-5 font-bold bg-red-300">card 1</button>
        <button className="p-5 font-bold bg-green-300">card 2</button>
        <button className="p-5 font-bold bg-gray-300">card 3</button>
        <button className="p-5 font-bold bg-blue-300">card 4</button>
-     </div>
+     </div> */}
 
-     <div className="flex space-x-2 justify-between">
+     {/* <div className="flex space-x-2 justify-between">
        <button className="p-5 font-bold bg-red-300">card 1</button>
        <button className="p-5 font-bold bg-green-300">card 2</button>
        <button className="p-5 font-bold bg-gray-300">card 3</button>
