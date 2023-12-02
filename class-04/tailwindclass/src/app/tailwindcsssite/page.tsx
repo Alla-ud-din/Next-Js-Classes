@@ -78,6 +78,42 @@ export default function Home() {
         <div className="bg-blue-500 p-4 bg-clip-padding">This element has a blue background that extends slightly beyond its content.</div>
         <div className="bg-yellow-100 p-4 bg-clip-content">This element has a yellow background that is confined to the area of its visible content.</div>
         <p className="bg-green-400 bg-clip-text">This text has a green background.</p>
+
+        <div className="blur-none border border-black">
+            Hello
+        </div>
+        <div className="blur-sm border border-black">
+            How
+        </div>
+        <div className="blur-lg border border-black">
+            are
+        </div>
+        <div className="blur-2xl border border-black">
+            you
+        </div>
+
+        <table className="border-collapse border border-slate-500 ...">
+            <thead>
+                <tr>
+                    <th className="border border-slate-600 ...">State</th>
+                    <th className="border border-slate-600 ...">City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td className="border border-slate-700 ...">Indiana</td>
+                    <td className="border border-slate-700 ...">Indianapolis</td>
+                </tr>
+                <tr>
+                    <td className="border border-slate-700 ...">Ohio</td>
+                    <td className="border border-slate-700 ...">Columbus</td>
+                </tr>
+                <tr>
+                    <td className="border border-slate-700 ...">Michigan</td>
+                    <td className="border border-slate-700 ...">Detroit</td>
+                </tr>
+            </tbody>
+        </table>
     </>
     )
 }
