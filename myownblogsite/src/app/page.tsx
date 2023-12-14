@@ -2,17 +2,29 @@ import { Button } from '@/components/ui/button'
 import { Mail } from 'lucide-react'
 import Image from 'next/image'
 import bgImg from '@/assets/bgImg.jpg'
+import Hero from '@/components/custom/Hero'
+import { Montserrat } from 'next/font/google'
+import { CardWithForm } from '@/components/custom/Cards'
+import Blogs from '@/components/custom/Blogs'
+
+const mont = Montserrat({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: '400'
+})
 
 export default function Home() {
   return (
-    <main className='flex items-center justify-center min-h-screen'>
-      <div className='flex flex-col gap-7 items-center justify-center'>
-      <h1 className='text-[40px] text-white font-bold'>Welcome to my Blog Site</h1>
-      <Button className='bg-black rounded-xl'>
-      <Mail className="mr-2 h-4 w-4" /> Login with Email
-      </Button>
-      </div>
-      <Image src={bgImg} className="opacity-60 absolute w-full h-screen z-[-1]" alt="bg"/>
-    </main>
+    <>
+    <Hero/>
+    {/* Cards */}
+    <Blogs />
+    {/* Footer */}
+    <footer>
+        <div className="flex justify-center items-center h-12 bg-gray-700 text-white">
+          <p>Copyright &copy; 2023 Blog Site, Inc. All rights reserved.</p>
+        </div>
+    </footer>
+    </>
   )
 }
