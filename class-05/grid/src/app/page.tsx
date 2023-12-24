@@ -1,8 +1,9 @@
 import Image from 'next/image'
 
-export default function Home() {
+export default async function Home() {
   return (
-    <><div className='grid grid-cols-4'>
+    <>
+    {/* <div className='grid grid-cols-4'>
       <div className='bg-red-300'>Left Sidebar</div>
       <div className='bg-green-300'>Center Content</div>
       <div className='bg-blue-300'>Right Sidebar</div>
@@ -30,7 +31,7 @@ export default function Home() {
         <h2>Monthly Plan</h2>
         <h1>$55</h1>
       </div>
-    </div>
+    </div> */}
     {/* Figma */}
     </>
   )
