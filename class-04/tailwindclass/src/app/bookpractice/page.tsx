@@ -17,9 +17,6 @@ export default function Home() {
         <h1 className="text-5xl text-center text-current border border-blue-500/20 my-2">Hello World 2</h1>
         <h1 className="text-6xl underline decoration-blue-500 decoration-dotted underline-offset-8  border border-green-500 my-2">Hello World 3</h1>
         <h1 className="text-9xl text-end leading-relax overline decoration-yellow-400 decoration-wavy border border-red-500 my-2">Hello World 4</h1>
-
-
-
     </div>
   )
 }
