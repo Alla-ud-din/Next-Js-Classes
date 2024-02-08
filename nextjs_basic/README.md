@@ -1,36 +1,109 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<===============diff b/w Props and Params===================>
+In the context of Next.js, "props" and "params" serve different purposes and refer to different concepts.
 
-## Getting Started
+1. **Props:**
+   - "Props" is short for "properties." In React and Next.js, "props" refers to the properties that are passed to a React component. These properties can be values or functions passed from a parent component to a child component. Props allow you to customize and configure a component based on the data or behavior needed in a specific context.
 
-First, run the development server:
+   ```jsx
+   // Example of passing a prop named "name" to a component
+   function Greeting({ name }) {
+     return <p>Hello, {name}!</p>;
+   }
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+   // Usage of the Greeting component with the "name" prop
+   <Greeting name="John" />;
+   ```
+
+2. **Params:**
+   - "Params" typically refers to the parameters or route parameters in the context of routing. In Next.js, dynamic routes allow you to create routes with parameters, and these parameters are accessible through the `params` object in the page component.
+
+   ```jsx
+   // Example of a dynamic route with a parameter named "id"
+   // File: pages/user/[id].js
+   function UserProfile({ params }) {
+     // Access the "id" parameter
+     const userId = params.id;
+
+     return <p>User ID: {userId}</p>;
+   }
+   ```
+
+In summary, "props" are used for passing data and functionality between components, while "params" are specific to routing and represent dynamic parameters in the URL. In the context of Next.js, dynamic route parameters are accessible through the `params` object in the `getStaticProps`, `getServerSideProps`, or page component itself.
+
+<=====================diff b/w state and variables==================================>
+In React, the term "state" typically refers to a special kind of variable that is used to manage and track changes in a component. While both states and regular variables store data, there are key differences between them:
+
+### State:
+
+1. **Managed by React:**
+   - State in React is managed by the React framework itself.
+   - You use the `useState` hook to declare and manage state in functional components, or you use `this.state` in class components.
+
+2. **Reactivity:**
+   - Changes to the state trigger a re-render of the component, updating the UI to reflect the new state.
+   - Reactivity is a fundamental concept in React, allowing components to update dynamically in response to changes.
+
+3. **Immutable:**
+   - State should be treated as immutable in React. You don't directly modify the state; instead, you use functions provided by React to update it, ensuring proper reactivity.
+
+4. **Component Scope:**
+   - State is scoped to the component where it is declared. It is not accessible from outside the component.
+
+### Variable:
+
+1. **Managed by Developer:**
+   - Regular variables are managed by the developer and do not have built-in mechanisms for automatic reactivity or updates.
+
+2. **No Reactivity:**
+   - Changes to regular variables do not automatically trigger a re-render of the component or update the UI.
+
+3. **Mutable:**
+   - Regular variables can be mutable, meaning their values can be directly modified. This can lead to challenges in managing and tracking changes.
+
+4. **Scope:**
+   - The scope of regular variables depends on how and where they are declared. They can be local to a function, block-scoped, or global.
+
+### Example:
+
+**State Example:**
+```jsx
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0); // State
+
+  const increment = () => {
+    setCount(count + 1); // Updating state
+  };
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+    </div>
+  );
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Variable Example:**
+```jsx
+import React from 'react';
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+function Counter() {
+  let count = 0; // Regular variable
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+  const increment = () => {
+    count += 1; // Directly modifying variable
+    // No automatic reactivity or UI update
+  };
 
-## Learn More
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+    </div>
+  );
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+In summary, while both states and regular variables store data, states in React come with additional features for automatic reactivity, immutability, and are managed by the React framework. Regular variables are more flexible but lack the built-in mechanisms for managing complex UI updates in React components.

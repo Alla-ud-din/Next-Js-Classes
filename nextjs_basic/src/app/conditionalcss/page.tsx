@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import style from '../style/style.module.css'
 export default function Home() {
+    // console.log(useState())
   const [color, setColor] = useState("red");
   const { red } = style
   return (
